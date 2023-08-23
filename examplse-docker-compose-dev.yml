@@ -1,0 +1,16 @@
+version: "3.1"
+
+services:
+  project-name:
+    container_name: project-name
+    user: root
+    build:
+      context: .
+      dockerfile: "docker/dev/Dockerfile"
+    entrypoint: "../entrypoint.sh"
+    restart: always
+    ports:
+      - "${APP_PORT:-5173}:5173"
+    env_file: .env
+    volumes:
+      - ./:/home/appuser/app
