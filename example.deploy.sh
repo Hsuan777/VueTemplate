@@ -9,5 +9,6 @@ cd dist
 git init
 git add .
 git commit -m 'deploy'
-git push -f https://github.com/your_repo master:gl-pages
+# git push -f https://github.com/your_repo main:gh-pages
+git push -f https://gitlab.com/your_repo main:gl-pages
 cd -
